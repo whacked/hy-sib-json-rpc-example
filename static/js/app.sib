@@ -1,0 +1,15 @@
+($ (#>
+    ($.jsonRPC.setup {endPoint: "/rpc"
+                       namespace: "App"})
+    (var btn-id "my-btn")
+    (var btn ($ (+ "#" btn-id)))
+    (when (= 0 btn.length)
+          (assign btn
+                  (|> ($ "<button>" {id: btn-id type: "button"})
+                      (.text "send request!")
+                      (.appendTo ($ "body"))
+                      (.click (#>
+                               ($.jsonRPC.request
+                                "index" {params: {}
+                                          success: (lambda (resp)
+                                                           (btn.text resp.result))}))))))))

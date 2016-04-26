@@ -1,0 +1,19 @@
+{
+  "name": "hy-sib-json-rpc-example",
+  "version": "0.0.0",
+  "authors": [
+    "nobody"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.2.3",
+    "jquery-jsonrpc": "~0.1.1"
+  }
+}

@@ -1,0 +1,28 @@
+* what
+
+  Minimal example demonstrating browser / server interaction over Flask and jquery-jsonrpc "isomorphically" using hosted lispy languages. No javascript and no python is written in this example.
+  
+* dependencies
+
+  - python: =pip install hy flask [[https://github.com/cenobites/flask-jsonrpc][Flask-JSONRPC]]=
+  - bower: inside =static/=, =bower install jquery [[https://github.com/datagraph/jquery-jsonrpc][jquery-jsonrpc]]=
+  - npm: =npm install -g [[https://sibilantjs.info/][sibilant]]=
+
+* transpile?
+
+** sibilant to js
+
+   =sibilant static/js/app.sib -m -o static/js=
+
+   or =M-x sibilant-mode/compile= in emacs
+
+** hy to python
+
+   =hy2py main.hy > main.py=
+
+* running
+
+  =hy main.hy=
+  
+  then visit http://localhost:5000
+  
